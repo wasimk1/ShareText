@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <div>
             <p style="font-family: Arial; font-size: medium"> ShareText</p>
-            <p> Write your Text<asp:TextBox ID="TextBox3" runat="server" Height="31px" TextMode="MultiLine" Width="490px"></asp:TextBox>
+            <p> Write your Text<asp:TextBox ID="TextBox3" runat="server" Height="96px" TextMode="MultiLine" Width="690px" ValidateRequestMode="Disabled"></asp:TextBox>
                 <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" />
             </p>
             <p> Generated ID <asp:TextBox ID="TextBox5" runat="server" ReadOnly="True"></asp:TextBox>
@@ -26,7 +26,7 @@
                 <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Get Text" />
             </p>
-            <p> Result<asp:TextBox ID="TextBox4" runat="server" Height="31px" ReadOnly="True" TextMode="MultiLine" Width="576px"></asp:TextBox>
+            <p> Result<asp:TextBox ID="TextBox4" runat="server" Height="97px" ReadOnly="True" TextMode="MultiLine" Width="738px" ValidateRequestMode="Disabled"></asp:TextBox>
             </p>
             <p> &nbsp;</p>
             <p> 
