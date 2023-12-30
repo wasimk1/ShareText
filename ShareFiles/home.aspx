@@ -35,7 +35,10 @@
             <p> &nbsp;</p>
             <p> &nbsp;</p>
             <hr />
-            <h1 class="article__title" style="padding: 0px 0px 20px; margin: 0px; outline: 0px; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-weight: normal; line-height: 1.2; font-size: small; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">All right reserved © ShareFile 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Developed by-
+            <h1 class="article__title" style="padding: 0px 0px 20px; margin: 0px; outline: 0px; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-weight: normal; line-height: 1.2; font-size: small; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                <asp:Label ID="Lblfooter" runat="server" Text="All right reserved © ShareFile"></asp:Label>
+                <asp:Label ID="Lblyear" runat="server"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Developed by-
                 <asp:LinkButton ID="LinkButton1" runat="server" onclientclick="window.open('https://www.linkedin.com/in/iwasimkhan01/');"  target="_self">Wasim Khan</asp:LinkButton>
             </h1>
             <p> &nbsp;</p>

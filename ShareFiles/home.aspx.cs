@@ -21,8 +21,24 @@ namespace ShareFiles
         string errstr = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
-            conn = new SqlConnection(constr);
-            conn.Open();
+            try
+            {
+                
+                    conn = new SqlConnection(constr);
+                    conn.Open();
+
+                    DateTime d = DateTime.Now;
+                    Lblyear.Text = d.Year.ToString();
+                
+
+            }
+            catch (Exception ex )
+            {
+
+                showpopupmessage("Server was not reachable at a moment - "+ex.Message);
+                return;
+            }
+           
         }
 
         
@@ -145,20 +161,34 @@ namespace ShareFiles
 
         public void getstoredintoDB(string str)
         {
-            SqlCommand cmd = new SqlCommand(str, conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(str, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                showpopupmessage(ex.Message);
+            }
             
 
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            //ProcessStartInfo url = new ProcessStartInfo("www.linkedin.com/in/iwasimkhan01/");
-            //Process.Start(url);
-           // System.Diagnostics.Process.Start("www.linkedin.com/in/iwasimkhan01/");
-            LinkButton1.Attributes.Add("href", "www.linkedin.com/in/iwasimkhan01/");
-            LinkButton1.Attributes.Add("target", "_blank");
+            try
+            {
+                LinkButton1.Attributes.Add("href", "www.linkedin.com/in/iwasimkhan01/");
+                LinkButton1.Attributes.Add("target", "_blank");
+            }
+            catch (Exception ex )
+            {
+
+                showpopupmessage(ex.Message);
+            }
+            
         }
 
         protected void Button4_Click(object sender, EventArgs e)
@@ -169,8 +199,17 @@ namespace ShareFiles
             TextBox4.Text = "";
         }
         public void showpopupmessage(string geterrstr) {
-            string err = geterrstr;
-            ClientScript.RegisterStartupScript(this.GetType(), "alertMessage", "alert('"+ err + "')", true);
+            try
+            {
+                string err = geterrstr;
+                ClientScript.RegisterStartupScript(this.GetType(), "alertMessage", "alert('" + err + "')", true);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
         }
     }

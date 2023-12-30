@@ -87,6 +87,24 @@ namespace ShareFiles
         protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
+        /// Lblfooter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lblfooter;
+
+        /// <summary>
+        /// Lblyear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Lblyear;
+
+        /// <summary>
         /// LinkButton1 control.
         /// </summary>
         /// <remarks>
