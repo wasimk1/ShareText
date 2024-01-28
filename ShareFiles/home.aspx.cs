@@ -19,16 +19,33 @@ namespace ShareFiles
         DataTable dttest = new DataTable();
         string cmdstr = string.Empty;
         string errstr = string.Empty;
+        string gettext = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                
-                    conn = new SqlConnection(constr);
-                    conn.Open();
 
-                    DateTime d = DateTime.Now;
-                    Lblyear.Text = d.Year.ToString();
+                conn = new SqlConnection(constr);
+                conn.Open();
+
+                DateTime d = DateTime.Now;
+                Lblyear.Text = d.Year.ToString();
+                gettext = TextBox3.Text;
+
+                if (!IsPostBack)
+                {
+                    // Validate initially to force asterisks
+                    // to appear before the first roundtrip.
+                    Validate();
+                    TextBox5.Text = "";
+                    TextBox3.Text = "";
+
+                }
+                else {
+                    TextBox3.Text = "";
+                    
+                }
                 
 
             }
@@ -47,11 +64,12 @@ namespace ShareFiles
         {
             try
             {
-                string gettext = string.Empty;
+               
+                //string gettext = string.Empty;
                 string newstr = string.Empty;
                 //conn.Open();
                 string getid = string.Empty;
-                if (string.IsNullOrWhiteSpace(TextBox3.Text))
+                if (string.IsNullOrWhiteSpace(gettext))
                 {
 
                     //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Please enter the text')", true);
@@ -60,7 +78,7 @@ namespace ShareFiles
                     return;
                 }
                 else {
-                    gettext = TextBox3.Text;
+                    //gettext = TextBox3.Text;
                     string s1 = "'";
                     string s2 = "''";
                      newstr = gettext.Replace(s1,s2);
@@ -71,30 +89,54 @@ namespace ShareFiles
                         showpopupmessage(errstr);
                         return;
                     }
-                    
+
+                    DateTime today = DateTime.Now;
+                    string updatedate = "yyyy-MM-dd HH:mm:ss";
+                    cmdstr = "insert into share_files_tab (TXT_FILE_NAME,TXT_DATE_TIME)  values ('" + newstr.Trim() + "','" + today.ToString(updatedate) + "')";
+                    getstoredintoDB(cmdstr);
+
+                    cmdstr = "select top 1 id from share_files_tab order by id desc";
+                    SqlCommand cmd = new SqlCommand(cmdstr, conn);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+
+                    while (sdr.Read())
+                    {
+                        getid = sdr["id"].ToString();
+                    }
+                    TextBox5.Text = getid;
+                    //string err = " Error inserting the text";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Successfully inserted and ID generated')", true);
+                    errstr = "Successfully inserted and ID generated";
+                    showpopupmessage(errstr);
+                    TextBox3.Text = "";
+                    sdr.Close();
+                    conn.Close();
+
+                  
                 }
                 
                 
-                DateTime today = DateTime.Now;
-                string updatedate = "yyyy-MM-dd HH:mm:ss";
-                cmdstr = "insert into share_files_tab (TXT_FILE_NAME,TXT_DATE_TIME)  values ('" + newstr.Trim() + "','" + today.ToString(updatedate) + "')";
-                getstoredintoDB(cmdstr);
+                //DateTime today = DateTime.Now;
+                //string updatedate = "yyyy-MM-dd HH:mm:ss";
+                //cmdstr = "insert into share_files_tab (TXT_FILE_NAME,TXT_DATE_TIME)  values ('" + newstr.Trim() + "','" + today.ToString(updatedate) + "')";
+                //getstoredintoDB(cmdstr);
 
-                cmdstr = "select top 1 id from share_files_tab order by id desc";
-                SqlCommand cmd = new SqlCommand(cmdstr, conn);
-                SqlDataReader sdr = cmd.ExecuteReader();
+                //cmdstr = "select top 1 id from share_files_tab order by id desc";
+                //SqlCommand cmd = new SqlCommand(cmdstr, conn);
+                //SqlDataReader sdr = cmd.ExecuteReader();
 
-                while (sdr.Read())
-                {
-                    getid = sdr["id"].ToString();
-                }
-                TextBox5.Text = getid;
-                //string err = " Error inserting the text";
-                //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Successfully inserted and ID generated')", true);
-                errstr = "Successfully inserted and ID generated";
-                showpopupmessage(errstr);
-                sdr.Close();
-                conn.Close();
+                //while (sdr.Read())
+                //{
+                //    getid = sdr["id"].ToString();
+                //}
+                //TextBox5.Text = getid;
+                ////string err = " Error inserting the text";
+                ////ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Successfully inserted and ID generated')", true);
+                //errstr = "Successfully inserted and ID generated";
+                //showpopupmessage(errstr);
+                //sdr.Close();
+                //conn.Close();
+                //TextBox3.Text = "";
             }
             catch (Exception ex)
             {
