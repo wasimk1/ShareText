@@ -17,51 +17,63 @@
         <div>
             <p style="font-family: Arial; font-size: medium">
                 <asp:Label runat="server" Text=" Share Text" ID="lblwebname" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Larger"></asp:Label></p>
-            <p style="font-family: Arial; font-size: medium"> 
+                        <p style="font-family: Arial; font-size: medium"> 
                 <asp:Label ID="Label2" runat="server" Text="Enter the UserName" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium"></asp:Label>
-                <asp:TextBox ID="txtusername" runat="server" Width="173px"></asp:TextBox>
-                <asp:Button ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" Font-Bold="True" Font-Names="Cascadia Code" />
+                <asp:TextBox ID="txtusername" runat="server" Width="173px" OnTextChanged="txtusername_TextChanged"></asp:TextBox>
+                <asp:Button ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" Font-Bold="True" Font-Names="Cascadia Code" AutoPostBack="True" />
                 <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Visible="False">Clear</asp:LinkButton>
 &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False" Font-Names="Cascadia Code" Font-Size="Small">Referesh</asp:LinkButton>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Button" Visible="False" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
-            <p align="center" font-family: Arial; font-size: medium"> 
-                <%--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --%>
-                <asp:RadioButton ID="rdsendbtn" runat="server" AutoPostBack="True" GroupName="rdgroup" OnCheckedChanged="rdsendbtn_CheckedChanged" Text="Send" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:RadioButton ID="rdbtnreceive" runat="server" AutoPostBack="True" GroupName="rdgroup" OnCheckedChanged="rdbtnreceive_CheckedChanged" Text="Receive" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium" />
-            </p>
-            <p> 
-                <asp:Label ID="Label1" runat="server" Text="Write your Text" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Large"></asp:Label>
-                <asp:TextBox ID="TextBox3" runat="server" Height="96px" TextMode="MultiLine" Width="690px" ValidateRequestMode="Disabled" Visible="False"></asp:TextBox>
-                <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Clear All" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Small" />
-            </p>
-            <p> 
-                <asp:Label ID="Label4" runat="server" Text="Select Person" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium"></asp:Label>
+            <p style="font-family: Arial; font-size: medium">
+                &nbsp;
+                
+
+                <table style="width:100%; border:2px;"  id ="tableview"  runat="server">
+                    <tr>
+                        <td align="center">
+                            <asp:Label ID="Label6" runat="server" Text="SEND" Visible="False"></asp:Label>
+                        </td>
+                        <td align="center" >
+                            <asp:Label ID="Label8" runat="server" Text="CHECK TO RECEIVE" Visible="False"></asp:Label>
+                            <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="True" OnCheckedChanged="CheckBox1_CheckedChanged" Visible="False" />
+                            <asp:Label ID="Label7" runat="server" Text="RECEIVE" Visible="False"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p align="left"> 
+    <asp:Label ID="Label1" runat="server" Text="Write your Text" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Large" Visible="False"></asp:Label>
+    <asp:TextBox ID="TextBox3" runat="server" Height="85px" TextMode="MultiLine" Width="419px" ValidateRequestMode="Disabled" Visible="False"></asp:TextBox>
+    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Clear All" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Small" Visible="False" />
+</p>
+                                        <p align="left"> 
+                <asp:Label ID="Label4" runat="server" Text="Select Person" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium" Visible="False"></asp:Label>
 &nbsp;
-                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Visible="False" Width="160px" CausesValidation="True">
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
                 </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" Width="69px" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Small" />
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" Width="69px" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Small" Visible="False" />
             </p>
-            <p> &nbsp;</p>
-            <p> 
-                <asp:Label ID="Label3" runat="server" Text="Generated ID" Visible="False" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Medium"></asp:Label>
+            
+            <p align="left"> 
+                <asp:Label ID="Label3" runat="server" Text="Generated ID" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Medium" Visible="False"></asp:Label>
 &nbsp;<asp:TextBox ID="TextBox5" runat="server" ReadOnly="True" Visible="False"></asp:TextBox>
             </p>
-            <p> 
+                        </td>
+                        <td>
+                                        <p> 
                 <%--<asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                 <asp:DropDownList ID="DropDownList2" runat="server" CausesValidation="True" Height="24px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="170px" AutoPostBack="True">
-                </asp:DropDownList>--%>&nbsp;
-                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Get all Text" Visible="False" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Small" />
+                </asp:DropDownList>--%>
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Get all Text" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Small" Visible="False" />
                 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label5" runat="server" Text="Select User" Visible="False" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Medium"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Select User" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Medium" Visible="False"></asp:Label>
                 
-                <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Visible="False" Width="160px" CausesValidation="True">
-</asp:DropDownList><asp:Button runat="server" Text="Refersh" OnClick="Unnamed1_Click" ID="btnref" Visible="False" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Small"></asp:Button>
+                <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
+</asp:DropDownList><asp:Button runat="server" Text="Refersh" OnClick="Unnamed1_Click" ID="btnref" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Small" Visible="False"></asp:Button>
 
             </p>
             <div style="height:300px; overflow:auto" align="center">
@@ -79,6 +91,24 @@
     </asp:GridView>
 </p>
             </div>
+                        </td>
+                       
+                    </tr>
+                    
+                </table>
+                
+
+            </p>
+            
+            <%--<p align="center" font-family: Arial; font-size: medium"> 
+                <%--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --%>
+                <%--<asp:RadioButton ID="rdsendbtn" runat="server" AutoPostBack="True" GroupName="rdgroup" OnCheckedChanged="rdsendbtn_CheckedChanged" Text="Send" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:RadioButton ID="rdbtnreceive" runat="server" AutoPostBack="True" GroupName="rdgroup" OnCheckedChanged="rdbtnreceive_CheckedChanged" Text="Receive" Visible="False" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium" />
+            </p>--%>
+            
+            
+            
             
             <%--<p> Enter the ID
                 <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>

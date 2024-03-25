@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\PROJECTS\\C#\\ShareFiles\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|e:\\projects\\c#\\sharefiles\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|E:\\PROJECTS\\C#\\ShareFiles\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "home.aspx.designer.cs",
+              "DocumentMoniker": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.designer.cs",
+              "RelativeDocumentMoniker": "home.aspx.designer.cs",
+              "ToolTip": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.designer.cs",
+              "RelativeToolTip": "home.aspx.designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwv/IAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T09:13:21.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "home.aspx",
+              "DocumentMoniker": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx",
+              "RelativeDocumentMoniker": "home.aspx",
+              "ToolTip": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx",
+              "RelativeToolTip": "home.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-02-03T14:54:49.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.aspx.cs",
+              "DocumentMoniker": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.cs",
+              "RelativeDocumentMoniker": "home.aspx.cs",
+              "ToolTip": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.cs",
+              "RelativeToolTip": "home.aspx.cs",
+              "ViewState": "AQIAAA8BAAAAAAAAAAAhwCMBAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-26T16:04:31.523Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

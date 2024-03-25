@@ -67,6 +67,6 @@ E:\PROJECTS\C#\ShareFiles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 E:\PROJECTS\C#\ShareFiles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\PROJECTS\C#\ShareFiles\obj\Debug\ShareFiles.csproj.AssemblyReference.cache
 E:\PROJECTS\C#\ShareFiles\obj\Debug\ShareFiles.csproj.CoreCompileInputs.cache
-E:\PROJECTS\C#\ShareFiles\obj\Debug\ShareFiles.csproj.CopyComplete
+E:\PROJECTS\C#\ShareFiles\obj\Debug\ShareFiles.csproj.Up2Date
 E:\PROJECTS\C#\ShareFiles\obj\Debug\ShareFiles.dll
 E:\PROJECTS\C#\ShareFiles\obj\Debug\ShareFiles.pdb
