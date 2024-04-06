@@ -4,30 +4,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Share Text</title>
+    <title>Share Text - Wasim Khan</title>
     <style type="text/css">
         #TextArea1 {
             height: 27px;
             width: 193px;
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body align="center">
     <form id="form1" runat="server"> 
         <div>
-            <p style="font-family: Arial; font-size: medium">
-                <asp:Label runat="server" Text=" Share Text" ID="lblwebname" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Larger"></asp:Label></p>
-                        <p style="font-family: Arial; font-size: medium"> 
-                <asp:Label ID="Label2" runat="server" Text="Enter the UserName" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium"></asp:Label>
+            <p >
+                <asp:Label runat="server" Text=" Share Text" ID="lblwebname" ></asp:Label></p>
+                        <p > 
+                <asp:Label ID="Label2" runat="server" Text="Enter the UserName"></asp:Label>
                 <asp:TextBox ID="txtusername" runat="server" Width="173px" OnTextChanged="txtusername_TextChanged"></asp:TextBox>
-                <asp:Button ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" Font-Bold="True" Font-Names="Cascadia Code" AutoPostBack="True" />
+                <asp:Button ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" AutoPostBack="True" />
                 <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Visible="False">Clear</asp:LinkButton>
-&nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False" Font-Names="Cascadia Code" Font-Size="Small">Referesh</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Referesh</asp:LinkButton>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Button" Visible="False" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
-            <p style="font-family: Arial; font-size: medium">
+            <p>
                 &nbsp;
                 
 
@@ -43,22 +47,23 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><p align="left"> 
-    <asp:Label ID="Label1" runat="server" Text="Write your Text" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Large" Visible="False"></asp:Label>
+                        <td>
+                            <p align="left"> 
+    <asp:Label ID="Label1" runat="server" Text="Write your Text"  Visible="False"></asp:Label>
     <asp:TextBox ID="TextBox3" runat="server" Height="85px" TextMode="MultiLine" Width="419px" ValidateRequestMode="Disabled" Visible="False"></asp:TextBox>
-    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Clear All" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Small" Visible="False" />
+    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Clear All" Font-Bold="True"  Visible="False" />
 </p>
                                         <p align="left"> 
-                <asp:Label ID="Label4" runat="server" Text="Select Person" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Medium" Visible="False"></asp:Label>
+                <asp:Label ID="Label4" runat="server" Text="Select Person"  Visible="False"></asp:Label>
 &nbsp;
                 <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
                 </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" Width="69px" Font-Bold="True" Font-Names="Cascadia Mono" Font-Size="Small" Visible="False" />
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" Width="69px"  Visible="False" />
             </p>
             
             <p align="left"> 
-                <asp:Label ID="Label3" runat="server" Text="Generated ID" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Medium" Visible="False"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Generated ID"  Visible="False"></asp:Label>
 &nbsp;<asp:TextBox ID="TextBox5" runat="server" ReadOnly="True" Visible="False"></asp:TextBox>
             </p>
                         </td>
@@ -67,13 +72,13 @@
                 <%--<asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
                 <asp:DropDownList ID="DropDownList2" runat="server" CausesValidation="True" Height="24px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="170px" AutoPostBack="True">
                 </asp:DropDownList>--%>
-                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Get all Text" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Small" Visible="False" />
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Get all Text"  Visible="False" />
                 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label5" runat="server" Text="Select User" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Medium" Visible="False"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Select User" Visible="False"></asp:Label>
                 
                 <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
-</asp:DropDownList><asp:Button runat="server" Text="Refersh" OnClick="Unnamed1_Click" ID="btnref" Font-Bold="True" Font-Names="Cascadia Code" Font-Size="Small" Visible="False"></asp:Button>
+</asp:DropDownList><asp:Button runat="server" Text="Refersh" OnClick="Unnamed1_Click" ID="btnref"  Visible="False"></asp:Button>
 
             </p>
             <div style="height:300px; overflow:auto" align="center">
@@ -124,7 +129,7 @@
             <p> &nbsp;</p>
             <hr />
             <div align="center">
-            <h1 align="center" class="article__title" style="padding: 0px 0px 20px; margin: 0px; outline: 0px; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-weight: normal; line-height: 1.2; font-size: small; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+            <h1 align="center" class="article__title" style="padding: 0px 0px 20px; margin: 0px; outline: 0px; box-sizing: border-box;  -webkit-font-smoothing: antialiased;  line-height: 1.2; font-size: small; color: rgb(0, 0, 0);  font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
                 <asp:Label ID="Lblfooter" runat="server" Text="All right reserved © ShareFile"></asp:Label>
                 <asp:Label ID="Lblyear" runat="server"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Developed by-
