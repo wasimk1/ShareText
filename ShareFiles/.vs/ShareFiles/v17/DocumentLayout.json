@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\PROJECTS\\C#\\ShareFiles\\",
+  "WorkspaceRootPath": "C:\\Wasim\\updated\\new\\ShareFiles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|e:\\projects\\c#\\sharefiles\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|c:\\wasim\\updated\\new\\sharefiles\\home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|E:\\PROJECTS\\C#\\ShareFiles\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|c:\\wasim\\updated\\new\\sharefiles\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|c:\\wasim\\updated\\new\\sharefiles\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|C:\\Wasim\\updated\\new\\ShareFiles\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4CA21E8E-C16D-4378-A55B-68AB6514C1AC}|ShareFiles.csproj|solutionrelative:home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,39 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Wasim\\updated\\new\\ShareFiles\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Wasim\\updated\\new\\ShareFiles\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACgAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-06T07:18:50.66Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Wasim\\updated\\new\\ShareFiles\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Wasim\\updated\\new\\ShareFiles\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "Properties\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T07:29:51.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -34,41 +69,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "home.aspx.designer.cs",
-              "DocumentMoniker": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.designer.cs",
-              "RelativeDocumentMoniker": "home.aspx.designer.cs",
-              "ToolTip": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.designer.cs",
-              "RelativeToolTip": "home.aspx.designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwv/IAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "home.aspx.cs",
+              "DocumentMoniker": "C:\\Wasim\\updated\\new\\ShareFiles\\home.aspx.cs",
+              "RelativeDocumentMoniker": "home.aspx.cs",
+              "ToolTip": "C:\\Wasim\\updated\\new\\ShareFiles\\home.aspx.cs",
+              "RelativeToolTip": "home.aspx.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAcwBwAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T09:13:21.864Z",
+              "WhenOpened": "2024-01-26T16:04:31.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "home.aspx",
-              "DocumentMoniker": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx",
+              "DocumentMoniker": "C:\\Wasim\\updated\\new\\ShareFiles\\home.aspx",
               "RelativeDocumentMoniker": "home.aspx",
-              "ToolTip": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx",
+              "ToolTip": "C:\\Wasim\\updated\\new\\ShareFiles\\home.aspx",
               "RelativeToolTip": "home.aspx",
               "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-02-03T14:54:49.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "home.aspx.cs",
-              "DocumentMoniker": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.cs",
-              "RelativeDocumentMoniker": "home.aspx.cs",
-              "ToolTip": "E:\\PROJECTS\\C#\\ShareFiles\\home.aspx.cs",
-              "RelativeToolTip": "home.aspx.cs",
-              "ViewState": "AQIAAA8BAAAAAAAAAAAhwCMBAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-01-26T16:04:31.523Z",
               "EditorCaption": ""
             }
           ]
