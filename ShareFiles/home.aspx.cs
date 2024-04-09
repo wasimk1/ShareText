@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Web.DynamicData;
 using System.Reflection.Emit;
+using System.Diagnostics.Eventing.Reader;
 
 namespace ShareFiles
 {
@@ -33,7 +34,11 @@ namespace ShareFiles
         {
             try
             {
-
+                string getpcname = Environment.MachineName;
+                if (getpcname == "PROBOOK") //Added code for Office connection string on 06-04-2024
+                {
+                    constr = ConfigurationManager.ConnectionStrings["constr-ProBook"].ConnectionString;
+                }
                 conn = new SqlConnection(constr);
                 conn.Open();
                 string takevalue = string.Empty;
