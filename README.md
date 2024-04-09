@@ -1,2 +1,2 @@
 # ShareText
-ShareText is a web application, where we can add the text through a website and get the added text or same text accross devices
+ShareText is a web application project, where we can share the text through a website and get the added text or the same text across devices,  a Two-way chatting application.
