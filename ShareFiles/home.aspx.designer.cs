@@ -15,15 +15,6 @@ namespace ShareFiles
     {
 
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// lblwebname control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace ShareFiles
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblwebname;
+
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Label2 control.
@@ -87,15 +87,6 @@ namespace ShareFiles
         protected global::System.Web.UI.WebControls.Button Button6;
 
         /// <summary>
-        /// tableview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tableview;
-
-        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -123,6 +114,15 @@ namespace ShareFiles
         protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
 
         /// <summary>
+        /// Label11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label11;
+
+        /// <summary>
         /// Label7 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +130,15 @@ namespace ShareFiles
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// tableview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTable tableview;
 
         /// <summary>
         /// Label1 control.
