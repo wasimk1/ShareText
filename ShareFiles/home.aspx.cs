@@ -744,6 +744,7 @@ namespace ShareFiles
                 Label7.Visible = false;
                 CheckBox1.Visible   = false;
                 CheckBox1.Checked=false;
+                TextBox5.Text = "";
                 ////tableview.Visible = false;
             }
             catch (Exception)

@@ -45,6 +45,7 @@ body {
     flex-direction: row;
 }
 .con-table{
+    height:70vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -52,4 +53,36 @@ body {
 }
 .con-table p{
     font-size:20px;
+}
+.btn {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.footer{
+    display:flex;
+    justify-content:center;
+}
+.footer p{
+    font-size:15px;
 }
