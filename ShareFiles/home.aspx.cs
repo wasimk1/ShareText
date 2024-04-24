@@ -17,7 +17,7 @@ namespace ShareFiles
     public partial class home : System.Web.UI.Page
     {
 
-        string constr = ConfigurationManager.ConnectionStrings["connstr"].ConnectionString;
+        string constr = ConfigurationManager.ConnectionStrings["newconstr"].ConnectionString;
         SqlConnection conn;
         DataTable dttest = new DataTable();
         DataTable dtusers = new DataTable();

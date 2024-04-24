@@ -16,7 +16,7 @@
     <main class="main-all">
         <div class="header">
             <p>
-                <asp:Label runat="server" Text=" Share Text" ID="lblwebname"></asp:Label>
+                <asp:Label runat="server" Text="Share Text - The Chat App" ID="lblwebname"></asp:Label>
             </p>
         </div>
 
@@ -25,7 +25,7 @@
                 <div class="con-validate-user">
                     <asp:Label ID="Label2" runat="server" Text="Enter the UserName"></asp:Label>&nbsp;
                     <asp:TextBox ID="txtusername" runat="server" Width="205px" OnTextChanged="txtusername_TextChanged" Height="24px" Font-Size="Large"></asp:TextBox>
-                    <asp:Button class="btn" ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" Font-Bold="True" AutoPostBack="True" />
+                    <asp:Button class="btn" ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" Font-Bold="True" AutoPostBack="True" Height="24px" />
                     <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Visible="False">Clear</asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Referesh</asp:LinkButton>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,7 +60,7 @@
                                 <p align="left">
                                     <asp:Label ID="Label4" runat="server" Text="Select Person" Visible="False"></asp:Label>
                                     &nbsp;
-                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="33px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
                 </asp:DropDownList>&nbsp;
                 <asp:Button class="btn" ID="Button2" runat="server" OnClick="Button2_Click" Text="Send your Text" Width="129px" Visible="False" Height="35px" />
                                 </p>
@@ -77,9 +77,9 @@
                                 <p>
                                     <asp:Button class="btn" ID="Button5" runat="server" OnClick="Button5_Click" Text="Get all Text" Visible="False" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label5" runat="server" Text="Select User" Visible="False"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Select Filter(User)" Visible="False"></asp:Label>
 
-                                    <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
+                                    <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" Height="33px" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
                                     </asp:DropDownList>
                                     <asp:Button class="btn" runat="server" Text="Refresh" OnClick="Unnamed1_Click" ID="btnref" Visible="False"></asp:Button>
 
