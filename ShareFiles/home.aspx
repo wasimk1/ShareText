@@ -85,21 +85,13 @@
 
                                 </p>
                                 <br />
-                                <div style="height: 300px; overflow: auto" align="center">
-                                    <h4 align="left">
-                                        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="566px" Font-Names="Calibri" Font-Size="Small" Height="271px" GridLines="Vertical">
-                                            <AlternatingRowStyle BackColor="#CCCCCC" />
-                                            <FooterStyle BackColor="#CCCCCC" />
-                                            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                                            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-                                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                                            <SortedAscendingHeaderStyle BackColor="#808080" />
-                                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                                            <SortedDescendingHeaderStyle BackColor="#383838" />
-                                        </asp:GridView>
-                                    </h4>
-                                </div>
+                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
+                                    <Columns>
+                                        <asp:BoundField DataField="ID" HeaderText="ID" />
+                                        <asp:BoundField DataField="TEXT" HeaderText="TEXT" />
+
+                                    </Columns>
+                                </asp:GridView>
                             </td>
                         </tr>
                     </table>

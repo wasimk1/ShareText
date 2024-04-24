@@ -57,6 +57,10 @@ body {
     .con-table h4 {
         font-size: 25px;
     }
+
+.content-all{
+
+}
 .btn {
     background-color: blue;
     border: none;
@@ -68,7 +72,6 @@ body {
     font-size: 12px;
     margin: 4px 2px;
     cursor: pointer;
-
 }
 .btn:hover{
     background-color: blue;
