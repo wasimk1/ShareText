@@ -6,7 +6,7 @@
 body {
     font-family: "Poppins", sans-serif;
     color: white;
-    background-color: rgb(0, 0, 33);
+    background-color: black;
 }
 
 .main-all {
@@ -54,6 +54,9 @@ body {
 .con-table p{
     font-size:20px;
 }
+    .con-table h4 {
+        font-size: 25px;
+    }
 .btn {
     background-color: blue;
     border: none;

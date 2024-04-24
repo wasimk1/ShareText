@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Share Text - Wasim Khan</title>
+    <title>Share Text - Wasim Khan | Software Engineer</title>
 
     <link href="CSS/StyleSheet.css" rel="stylesheet" />
 
@@ -24,7 +24,7 @@
             <form id="form1" runat="server">
                 <div class="con-validate-user">
                     <asp:Label ID="Label2" runat="server" Text="Enter the UserName"></asp:Label>&nbsp;
-                    <asp:TextBox ID="txtusername" runat="server" Width="173px" OnTextChanged="txtusername_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtusername" runat="server" Width="205px" OnTextChanged="txtusername_TextChanged" Height="24px" Font-Size="Large"></asp:TextBox>
                     <asp:Button class="btn" ID="btnusersubmit" runat="server" OnClick="btnusersubmit_Click" Text="Submit" Font-Bold="True" AutoPostBack="True" />
                     <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Visible="False">Clear</asp:LinkButton>
                     &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Referesh</asp:LinkButton>
@@ -47,27 +47,28 @@
 
 
                 <div class="con-table">
-                    <table style="width: 100%; border: 10px;" id="tableview" runat="server">
+                    <table style="width: 100%; border: 1px;" id="tableview" runat="server">
                         <tr>
                             <td>
                                 <p align="left">
-                                    <asp:Label ID="Label1" runat="server" Text="Write your Text" Visible="False"></asp:Label>
-                                    <asp:TextBox ID="TextBox3" runat="server" Height="100px" TextMode="MultiLine" Width="500px" ValidateRequestMode="Disabled" Visible="False"></asp:TextBox>
-                                </p>
+                                    &nbsp;</p>
                                 <p align="left">
-                                    <asp:Button class="btn" ID="Button4" runat="server" OnClick="Button4_Click" Text="Clear All"  Visible="False" />
+                                    <asp:Label ID="Label1" runat="server" Text="Write your Text" Visible="False"></asp:Label>
+                                    <asp:TextBox ID="TextBox3" runat="server" Height="100px" TextMode="MultiLine" Width="500px" ValidateRequestMode="Disabled" Visible="False" Font-Size="Large"></asp:TextBox>
                                 </p>
+                                
                                 <p align="left">
                                     <asp:Label ID="Label4" runat="server" Text="Select Person" Visible="False"></asp:Label>
                                     &nbsp;
                 <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="17px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="160px" CausesValidation="True" Visible="False">
                 </asp:DropDownList>&nbsp;
-                <asp:Button class="btn" ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" Width="69px" Visible="False" />
+                <asp:Button class="btn" ID="Button2" runat="server" OnClick="Button2_Click" Text="Send your Text" Width="129px" Visible="False" Height="35px" />
                                 </p>
 
                                 <p align="left">
                                     <asp:Label ID="Label3" runat="server" Text="Generated ID" Visible="False"></asp:Label>
-                                    &nbsp;<asp:TextBox ID="TextBox5" runat="server" ReadOnly="True" Visible="False"></asp:TextBox>
+                                    &nbsp;<asp:TextBox ID="TextBox5" runat="server" ReadOnly="True" Visible="False"></asp:TextBox><br />
+                                    <asp:Button class="btn" ID="Button4" runat="server" OnClick="Button4_Click" Text="Clear All"  Visible="False" />
                                 </p>
                             </td>
 
@@ -85,19 +86,19 @@
                                 </p>
                                 <br />
                                 <div style="height: 300px; overflow: auto" align="center">
-                                    <p align="center">
-                                        <asp:GridView ID="GridView1" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="442px" Font-Names="Calibri" Font-Size="Small">
+                                    <h4 align="left">
+                                        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="566px" Font-Names="Calibri" Font-Size="Small" Height="271px" GridLines="Vertical">
+                                            <AlternatingRowStyle BackColor="#CCCCCC" />
                                             <FooterStyle BackColor="#CCCCCC" />
                                             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                                            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-                                            <RowStyle BackColor="White" />
+                                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
                                             <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                                             <SortedAscendingCellStyle BackColor="#F1F1F1" />
                                             <SortedAscendingHeaderStyle BackColor="#808080" />
                                             <SortedDescendingCellStyle BackColor="#CAC9C9" />
                                             <SortedDescendingHeaderStyle BackColor="#383838" />
                                         </asp:GridView>
-                                    </p>
+                                    </h4>
                                 </div>
                             </td>
                         </tr>
@@ -126,7 +127,7 @@
                         <asp:Label ID="Lblfooter" runat="server" Text="All right reserved © ShareFile"></asp:Label>
                         <asp:Label ID="Lblyear" runat="server"></asp:Label>
                         Developed by -
-                        <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="window.open('https://www.linkedin.com/in/iwasimkhan01/');" target="_self">Wasim Khan</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="window.open('https://www.linkedin.com/in/wasimk1/');" target="_self">Wasim Khan</asp:LinkButton>
                     </p>
                 </div>
             </form>
