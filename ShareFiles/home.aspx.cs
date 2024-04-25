@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Web.DynamicData;
 using System.Reflection.Emit;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.InteropServices;
 
 namespace ShareFiles
 {
@@ -29,7 +30,7 @@ namespace ShareFiles
         DataTable dtgridview = new DataTable();
         DataTable dtdrpfetchusername = new DataTable();
         public static string statownerid = string.Empty;
-
+        public static string statownername = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -141,7 +142,7 @@ namespace ShareFiles
 
                     DateTime today = DateTime.Now;
                     string updatedate = "yyyy-MM-dd HH:mm:ss";
-                    cmdstr = "insert into SHARE_FILES_TEXT_TAB (TXT_FILE_NAME,DATE_TIME,NUM_USER_UNIQUE_NO,TEXT_OWNER)  values ('" + newstr.Trim() + "','" + today.ToString(updatedate) + "'," + DropDownList1.SelectedValue.ToString() + ","+ statownerid + ")";
+                    cmdstr = "insert into SHARE_FILES_TEXT_TAB (TXT_FILE_NAME,DATE_TIME,NUM_USER_UNIQUE_NO,TEXT_OWNER,TXT_OWNER_NAME)  values ('" + newstr.Trim() + "','" + today.ToString(updatedate) + "'," + DropDownList1.SelectedValue.ToString() + ","+ statownerid + ",'"+ statownername + "')";
                     getstoredintoDB(cmdstr);
 
                     cmdstr = "select top 1 id from SHARE_FILES_TEXT_TAB order by id desc";
@@ -370,12 +371,13 @@ namespace ShareFiles
                         LinkButton3.Visible = true;
 
                         DataTable dtid = new DataTable();
-                        cmdstr = "select id from users where Username='" + txtusername.Text.ToUpper() + "'";
+                        cmdstr = "select id,USERNAME from users where Username='" + txtusername.Text.ToUpper() + "'";
                         SqlCommand cmd2 = new SqlCommand(cmdstr, conn);
                         SqlDataAdapter sda2 = new SqlDataAdapter(cmd2);
                         sda2.Fill(dtid);
                         sda2.Dispose();
                         statownerid = dtid.Rows[0]["ID"].ToString();
+                        statownername = dtid.Rows[0]["USERNAME"].ToString();
                         //tableview.Visible = true;
                         setSendElementToVisible();
                     }
@@ -478,7 +480,7 @@ namespace ShareFiles
             try
             {
                 //string setvalueid = DropDownList2.SelectedValue.ToString();
-                cmdstr = "select st.ID,st.txt_file_name[TEXT] from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id  order by st.id desc  ";
+                cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT] from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id  order by st.id desc  ";
                 SqlCommand cmd = new SqlCommand(cmdstr, conn);
                 SqlDataAdapter sd = new SqlDataAdapter(cmd);
 
@@ -533,7 +535,11 @@ namespace ShareFiles
                     return;
 
                 }
-                cmdstr = "select st.ID,st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id   where u.id='"+ statownerid + "' order by st.id desc  ";
+                int id= Convert.ToInt32(DropDownList2.SelectedValue);
+                //if(DropDownList2.SelectedIndex=)
+                //cmdstr = "select u.USERNAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id   where u.id='" + statownerid + "' order by st.id desc  ";
+               cmdstr = "select u.USERNAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id   where  u.id in ("+ statownerid + ", "+id+")  order by st.id desc  ";
+
                 SqlCommand cmd = new SqlCommand(cmdstr, conn);
                 SqlDataAdapter sd = new SqlDataAdapter(cmd);
 
@@ -559,6 +565,7 @@ namespace ShareFiles
 
                     btnref.Visible = true;
                 }
+
             }
             catch (Exception ex) 
             {
@@ -622,7 +629,7 @@ namespace ShareFiles
                     showpopupmessage(err);
                     return;
                 }
-                cmdstr = "select st.ID,st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id  where ='"+ statownerid + "'  order by st.id desc ";
+                cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id  where ='" + statownerid + "'  order by st.id desc ";
                 SqlCommand cmd = new SqlCommand(cmdstr, conn);
                 SqlDataAdapter sd = new SqlDataAdapter(cmd);
 
@@ -739,6 +746,7 @@ namespace ShareFiles
                 GridView1.Visible = false;
                 LinkButton3.Visible = false;
                 statownerid = "";
+                statownername = "";
                 Label6.Visible = false;
                 Label8.Visible = false;
                 Label7.Visible = false;

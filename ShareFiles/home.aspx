@@ -87,7 +87,7 @@
                                 <br />
                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
                                     <Columns>
-                                        <asp:BoundField DataField="ID" HeaderText="ID" />
+                                        <asp:BoundField DataField="NAME" HeaderText="NAME" />
                                         <asp:BoundField DataField="TEXT" HeaderText="TEXT" />
 
                                     </Columns>
