@@ -31,6 +31,7 @@ namespace ShareFiles
         DataTable dtdrpfetchusername = new DataTable();
         public static string statownerid = string.Empty;
         public static string statownername = string.Empty;
+        public static int id = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -489,8 +490,8 @@ namespace ShareFiles
                 GridView1.DataBind();
                 sd.Dispose();
 
-
-                cmdstr = "select id,username from users";
+                dtusers.Clear();
+                cmdstr = "select USERNAME,ID from users where id  <> '" + statownerid + "' order by username asc";
                 SqlCommand cmd1 = new SqlCommand(cmdstr, conn);
                 SqlDataAdapter sda1 = new SqlDataAdapter(cmd1);
                 sda1.Fill(dtusers);
@@ -535,10 +536,22 @@ namespace ShareFiles
                     return;
 
                 }
-                int id= Convert.ToInt32(DropDownList2.SelectedValue);
+                //int id = 0;
+                //string cmdstring = "select USERNAME from users where id  <> '" + DropDownList2.SelectedValue + "' order by username asc";
+                //SqlCommand sql = new SqlCommand(cmdstring, conn);
+                //SqlDataAdapter sda = new SqlDataAdapter(sql);
+                //DataTable dt_insta_userid = new DataTable();
+                //sda.Fill(dt_insta_userid);
+                //sda.Dispose();
+                //if(dt_insta_userid.Rows.Count>0)
+                //{
+                //     //id = Convert.ToInt32(dt_insta_userid.Rows[0]["USERNAME"].ToString());
+                //}
+                id= Convert.ToInt32(DropDownList2.SelectedValue);
                 //if(DropDownList2.SelectedIndex=)
                 //cmdstr = "select u.USERNAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id   where u.id='" + statownerid + "' order by st.id desc  ";
-               cmdstr = "select u.USERNAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id   where  u.id in ("+ statownerid + ", "+id+")  order by st.id desc  ";
+                //cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id   where  u.id in (" + statownerid + ", "+id+")  order by st.id desc  ";
+                cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id where st.TEXT_OWNER='"+ statownerid + "'or st.TEXT_OWNER='"+ id + "'  order by st.id desc  ";
 
                 SqlCommand cmd = new SqlCommand(cmdstr, conn);
                 SqlDataAdapter sd = new SqlDataAdapter(cmd);
@@ -629,7 +642,8 @@ namespace ShareFiles
                     showpopupmessage(err);
                     return;
                 }
-                cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id  where ='" + statownerid + "'  order by st.id desc ";
+                //cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id  where ='" + statownerid + "'  order by st.id desc ";
+                cmdstr = "select st.TXT_OWNER_NAME[NAME],st.txt_file_name[TEXT]   from SHARE_FILES_TEXT_TAB st inner join users u on st.NUM_USER_UNIQUE_NO=u.id where st.TEXT_OWNER='" + statownerid + "'or st.TEXT_OWNER='" + id + "'  order by st.id desc  ";
                 SqlCommand cmd = new SqlCommand(cmdstr, conn);
                 SqlDataAdapter sd = new SqlDataAdapter(cmd);
 
